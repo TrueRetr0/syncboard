@@ -1,0 +1,37 @@
+{
+  "name": "syncboard-desktop",
+  "version": "1.0.0",
+  "description": "Syncboard Desktop App - Universal Clipboard Sync",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-builder --mac",
+    "build-win": "electron-builder --win",
+    "build-linux": "electron-builder --linux"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.6.1"
+  },
+  "build": {
+    "appId": "com.yourcompany.syncboard",
+    "productName": "Syncboard",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
